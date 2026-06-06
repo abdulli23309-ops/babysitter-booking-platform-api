@@ -1,0 +1,25 @@
+# .NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+packages/
+
+# SQL
+*.mdf
+*.ldf
+*.ndf
+
+# Config files with secrets
+appsettings.local.json
+appsettings.Development.json
+
+# Logs
+logs/
+*.log
