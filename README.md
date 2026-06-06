@@ -1,129 +1,88 @@
-# Babysitter Booking Platform API
+# Babysitter Booking Platform - Backend API
 
-A comprehensive **ASP.NET Web API** backend for a smart babysitter booking and baby monitoring system powered by **AI-based baby cry detection** using the YamNet machine learning model.
+A comprehensive **ASP.NET Web API** backend for a smart babysitter booking and baby monitoring platform with **AI-powered cry detection** using the YamNet machine learning model.
 
-Built with **ASP.NET Web API 2.0**, **SQL Server**, and **Entity Framework 6**, the platform provides secure babysitter hiring, job management, real-time notifications, availability tracking, and intelligent matching between parents and babysitters.
+The API provides complete functionality for babysitter hiring, job management, real-time notifications, availability scheduling, review systems, and intelligent babysitter-parent matching.
 
 ---
 
-## 🚀 Features
-
-### 👨‍👩‍👧 User Management
+# 🎯 Features
 
 * Parent and Babysitter registration & authentication
-* Profile management with image uploads
-* Secure login system using stored procedures
-
-### 📋 Babysitting Job Management
-
-* Create and manage babysitting jobs
-* Babysitters can bid on jobs
-* Parents can accept or reject bids
-* Job tracking and status updates
-
-### 🤖 Intelligent Matching System
-
-* Smart babysitter-parent matching algorithm
-* Matching based on:
-
-  * City
-  * Availability
-  * Experience
-  * Ratings
-
-### 📅 Availability Management
-
-* Babysitters can create hourly availability schedules
-* Time-slot based booking system
-
-### 👶 AI Cry Detection
-
-* Integrated YamNet machine learning model
-* Detects baby crying from audio input
-* Sends alerts and notifications to parents
-
-### 🔔 Real-Time Notifications
-
-* Instant job alerts
-* Cry detection notifications
-* Booking and bid updates
-
-### ⭐ Ratings & Reviews
-
-* Post-job rating system
-* Babysitter reviews and average ratings
-
-### 🖼️ Image Management
-
-* Upload and manage profile pictures for:
-
-  * Parents
-  * Babysitters
-  * Children
+* Babysitting job creation and management
+* Babysitter bidding and job acceptance system
+* Real-time babysitter matching algorithm
+* Babysitter hourly availability management
+* AI-powered baby cry detection using YamNet
+* Real-time notifications and alerts
+* Ratings and review system
+* Profile image upload support
+* Child profile management
+* RESTful API architecture with Swagger documentation
 
 ---
 
 # 🏗️ Project Architecture
 
-## 📂 Controllers (API Endpoints)
+## API Controllers
 
-### ParentController.cs
+### `ParentController.cs`
 
 Handles:
 
 * Parent registration
-* Profile updates
+* Profile management
 * Child management
 * Job posting
 
-### BabySitterController.cs
+### `BabySitterController.cs`
 
 Handles:
 
 * Babysitter registration
-* Profile management
+* Profile updates
 * Availability scheduling
 
-### JobsController.cs
+### `JobsController.cs`
 
 Handles:
 
 * Job creation
-* Bidding system
+* Bid management
 * Job status updates
 
-### MatchingController.cs
+### `MatchingController.cs`
 
 Handles:
 
 * Intelligent babysitter matching
 
-### CryDetectionController.cs
+### `CryDetectionController.cs`
 
 Handles:
 
-* YamNet audio analysis
-* Cry alert generation
+* Audio analysis
+* Baby cry detection alerts
 
-### NotificationsController.cs
-
-Handles:
-
-* Real-time notification delivery
-
-### ReviewController.cs
+### `NotificationsController.cs`
 
 Handles:
 
-* Ratings and review submissions
+* Real-time notifications
 
-### ImageController.cs
+### `ReviewController.cs`
+
+Handles:
+
+* Ratings and reviews
+
+### `ImageController.cs`
 
 Handles:
 
 * Image upload and retrieval
 
-### ChildrenController.cs
+### `ChildrenController.cs`
 
 Handles:
 
@@ -131,26 +90,20 @@ Handles:
 
 ---
 
-# 🗄️ Database Architecture
+# 🗄️ Database
 
-The project includes a complete SQL Server database setup located in:
+The complete SQL Server database script is included inside the API repository:
 
-`/database/schema-and-seed.sql`
+Database Folder:
+https://github.com/abdulli23309-ops/babysitter-booking-platform-api/tree/main/database
 
-The database script contains:
+The database includes:
 
-* Full database schema
-* Relationships
-* Triggers
-* Stored procedures
-* Functions
-* Sample seed data
+* Complete SQL Server schema
+* Tables and relationships
+* Sample seed data for testing
 
----
-
-## 📊 Database Tables
-
-### Core Tables
+## Main Database Tables
 
 * `Parent`
 * `Babysitter`
@@ -166,88 +119,31 @@ The database script contains:
 
 ---
 
-## ⚙️ SQL Functions
-
-### `fn_CalculateAge(@DOB)`
-
-Automatically calculates age from date of birth.
-
----
-
-## 🔄 SQL Triggers
-
-### `trg_AutoCalculateSitterAge`
-
-Automatically updates babysitter age.
-
-### `trg_AutoCalculateChildAge`
-
-Automatically updates child age.
-
-### `trg_CheckDuplicateParent`
-
-Prevents duplicate parent registration.
-
-### `trg_CheckDuplicateSitter`
-
-Prevents duplicate babysitter registration.
-
----
-
-## 🛠️ Stored Procedures
-
-### `sp_UserLogin`
-
-Handles login authentication for:
-
-* Parent
-* Babysitter
-
----
-
-## 🌱 Sample Seed Data
-
-The database includes:
-
-* 4 Parents
-* 3 Babysitters
-* 4 Children
-* Multiple jobs across:
-
-  * Islamabad
-  * Rawalpindi
-  * Lahore
-  * Karachi
-* Predefined hourly time slots
-
----
-
 # 🛠️ Technologies Used
 
 * **Framework:** ASP.NET Web API 2.0
+* **Language:** C#
 * **Database:** SQL Server
 * **ORM:** Entity Framework 6 (Database-First)
-* **Machine Learning:** YamNet Model
-* **API Documentation:** Swagger / Swashbuckle
-* **Language:** C#
-* **Database Scripts:** T-SQL
+* **Machine Learning:** YamNet
+* **API Documentation:** Swagger (Swashbuckle)
 
 ---
 
-# ⚡ Setup Instructions
+# 🚀 Setup Instructions
 
-## 📌 Prerequisites
+## Prerequisites
 
 * Visual Studio 2022+
-* SQL Server 2019+
 * .NET Framework 4.7.2+
+* SQL Server 2019+
 * SQL Server Management Studio (SSMS)
 
 ---
 
 # 📥 Installation
 
-## 1️⃣ Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/abdulli23309-ops/babysitter-booking-platform-api.git
@@ -255,46 +151,19 @@ git clone https://github.com/abdulli23309-ops/babysitter-booking-platform-api.gi
 
 ---
 
-## 2️⃣ Setup Database
+## 2. Setup Database
 
-### Method 1 — Using SQL Server Management Studio (Recommended)
-
-1. Open SQL Server Management Studio
-2. Connect to your SQL Server instance
-3. Click **New Query**
-4. Open:
+Open the SQL file from:
 
 ```bash
 database/schema-and-seed.sql
 ```
 
-5. Click **Execute (F5)**
+Execute the script in SQL Server Management Studio (SSMS).
 
 ---
 
-### Method 2 — Using PowerShell
-
-```bash
-sqlcmd -S YOUR_SERVER_NAME -i "database/schema-and-seed.sql"
-```
-
-Replace:
-
-```bash
-YOUR_SERVER_NAME
-```
-
-with your SQL Server instance name.
-
-Example:
-
-```bash
-LOCALHOST\SQLEXPRESS
-```
-
----
-
-## 3️⃣ Configure Connection String
+## 3. Configure Connection String
 
 Open:
 
@@ -302,19 +171,19 @@ Open:
 Web.config
 ```
 
-Update:
+Update your SQL Server connection string:
 
 ```xml
 <connectionStrings>
   <add name="Model1"
-       connectionString="Server=YOUR_SERVER_NAME;Database=BabysitterDB;Trusted_Connection=true;"
+       connectionString="Server=YOUR_SERVER;Database=BabysitterDB;Trusted_Connection=true;"
        providerName="System.Data.SqlClient" />
 </connectionStrings>
 ```
 
 ---
 
-## 4️⃣ Open Project
+## 4. Open Project
 
 Open:
 
@@ -326,17 +195,7 @@ Restore all NuGet packages.
 
 ---
 
-## 5️⃣ Update Database
-
-Run in Package Manager Console:
-
-```powershell
-Update-Database
-```
-
----
-
-## 6️⃣ Run Application
+## 5. Run the Application
 
 Press:
 
@@ -360,112 +219,54 @@ https://localhost:PORT/swagger/
 
 # 📡 Key API Endpoints
 
-## 👨 Parent APIs
+## Parent APIs
 
-| Method | Endpoint               | Description           |
-| ------ | ---------------------- | --------------------- |
-| POST   | `/api/parent/register` | Register Parent       |
-| PUT    | `/api/parent/{id}`     | Update Parent Profile |
-| POST   | `/api/parent/child`    | Add Child             |
+* `POST /api/parent/register` → Register parent
+* `PUT /api/parent/{id}` → Update parent profile
+* `POST /api/parent/child` → Add child
 
 ---
 
-## 👩 Babysitter APIs
+## Babysitter APIs
 
-| Method | Endpoint                       | Description               |
-| ------ | ------------------------------ | ------------------------- |
-| POST   | `/api/babysitter/register`     | Register Babysitter       |
-| PUT    | `/api/babysitter/{id}`         | Update Babysitter Profile |
-| POST   | `/api/babysitter/availability` | Set Availability          |
+* `POST /api/babysitter/register` → Register babysitter
+* `PUT /api/babysitter/{id}` → Update babysitter profile
+* `POST /api/babysitter/availability` → Set availability
 
 ---
 
-## 📋 Job APIs
+## Job & Matching APIs
 
-| Method | Endpoint                | Description      |
-| ------ | ----------------------- | ---------------- |
-| POST   | `/api/parent/job`       | Create Job       |
-| GET    | `/api/matching/find`    | Find Babysitters |
-| POST   | `/api/jobs/{jobId}/bid` | Submit Bid       |
+* `POST /api/parent/job` → Create babysitting job
+* `GET /api/matching/find` → Find matching babysitters
+* `POST /api/jobs/{jobId}/bid` → Submit bid
 
 ---
 
-## 👶 Cry Detection APIs
+## Cry Detection APIs
 
-| Method | Endpoint                              | Description    |
-| ------ | ------------------------------------- | -------------- |
-| POST   | `/api/crydetection/analyze`           | Analyze Audio  |
-| GET    | `/api/crydetection/alerts/{parentId}` | Get Cry Alerts |
+* `POST /api/crydetection/analyze` → Analyze baby cry audio
+* `GET /api/crydetection/alerts/{parentId}` → Get cry alerts
 
 ---
 
-## ⭐ Review APIs
+## Review APIs
 
-| Method | Endpoint                            | Description            |
-| ------ | ----------------------------------- | ---------------------- |
-| POST   | `/api/review/{jobId}`               | Submit Review          |
-| GET    | `/api/review/babysitter/{sitterId}` | Get Babysitter Reviews |
+* `POST /api/review/{jobId}` → Submit review
+* `GET /api/review/babysitter/{sitterId}` → Get babysitter reviews
 
 ---
 
-# 📈 Example SQL Queries
+# 🤝 Frontend Repository
 
-## Get All Parents
-
-```sql
-SELECT * FROM Parent;
-```
-
----
-
-## Get Open Jobs
-
-```sql
-SELECT * FROM Job WHERE Status = 'Open';
-```
-
----
-
-## Highest Rated Babysitter
-
-```sql
-SELECT TOP 1 b.FullName, AVG(r.Rating) AS AvgRating
-FROM Babysitter b
-LEFT JOIN Review r ON b.Sitter_ID = r.Sitter_ID
-GROUP BY b.Sitter_ID, b.FullName
-ORDER BY AvgRating DESC;
-```
-
----
-
-## Find Matching Babysitters
-
-```sql
-SELECT b.*, sa.AvailableDate
-FROM Babysitter b
-JOIN SitterAvailability sa ON b.Sitter_ID = sa.Sitter_ID
-WHERE sa.City = 'Islamabad'
-  AND sa.AvailableDate = '2026-04-12'
-ORDER BY b.ExperienceYears DESC;
-```
-
----
-
-# 🔗 GitHub Repositories
-
-## Backend API Repository
-
-GitHub: https://github.com/abdulli23309-ops/babysitter-booking-platform-api
-
-## Frontend Repository
-
-GitHub: https://github.com/abdulli23309-ops/babysitter-booking-platform
+Frontend Project:
+https://github.com/abdulli23309-ops/babysitter-booking-platform
 
 ---
 
 # 👨‍💻 Author
 
-## Abdullah Saleem
+Abdullah Saleem
 
 GitHub:
 https://github.com/abdulli23309-ops
